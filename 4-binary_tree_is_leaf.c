@@ -2,7 +2,7 @@
 
 
 /**
- * binary_tree_is_leaf function that deletes an entire binary tree
+ * binary_tree_is_leaf - function that deletes an entire binary tree
  * @node: nodo to check if is a leaf
  * Return: NULL if nos is leaf otherwise return 1
  */
