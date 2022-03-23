@@ -16,9 +16,9 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 	if (!aux->parent)
 		return (NULL);
 	aux = aux->parent;
-	if (aux->left->n == aux)
+	if (aux->left == aux)
 		return (aux->right);
-	if (aux->right->n == aux)
+	if (aux->right == aux)
 		return (aux->left);
 	return (NULL);
 }
