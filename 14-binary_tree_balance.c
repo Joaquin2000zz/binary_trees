@@ -25,9 +25,21 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 int binary_tree_balance(const binary_tree_t *tree)
 {
+    size_t altura_izq, altura_der;
+
 	if(!tree)
 		return (0);
-	printf("%ld\n",binary_tree_height(tree->left));
-	printf("%ld\n",binary_tree_height(tree->right));
-	return ((binary_tree_height(tree->left)) - (binary_tree_height(tree->right)));
+    if(tree->left)
+        altura_izq = binary_tree_height(tree->left) + 1;
+    else
+        altura_izq = binary_tree_height(tree->left);
+    if(tree->right)
+    {
+        altura_der = binary_tree_height(tree->right) + 1;
+    }
+    else
+    {
+        altura_der = binary_tree_height(tree->right);
+    }
+	return (altura_izq - altura_der);
 }
