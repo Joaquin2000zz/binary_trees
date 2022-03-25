@@ -39,7 +39,7 @@ int Stlesser(binary_tree_t *tree, int value)
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	if (!tree)
-		return (1);
+		return (0);
 	if (Stlesser(tree->left, tree->n) && Stgreater(tree->right, tree->n) &&
 	    binary_tree_is_bst(tree->left) && binary_tree_is_bst(tree->right))
 		return (1);
